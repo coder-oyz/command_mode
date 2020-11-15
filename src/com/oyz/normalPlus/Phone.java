@@ -1,27 +1,38 @@
 package com.oyz.normalPlus;
 
+
+
 public class Phone {
-    public void openTv(Tv tv){
-        tv.turnOn();
-    }
-    public void closeTv(Tv tv){
-        tv.turnOff();
-    }
+    Tv tv;
+    Light light;
+    //新加
+    Fan fan;
 
-    public void openLight(Light light){
-        light.turnOn();
+    //改
+    public Phone(Tv tv, Light light,Fan fan){
+        this.tv=tv;
+        this.light=light;
+        this.fan=fan;
     }
-    public void closeLight(Light light){
-        light.turnOff();
+    public void openTv(){
+        this.tv.turnOn();
     }
-
+    public void closeTv(){
+        this.tv.turnOff();
+    }
+    public void openLight(){
+        this.light.turnOn();
+    }
+    public void closeLight(){
+        this.light.turnOff();
+    }
 
     //新加
-    public void openFan(Fan fan){
-        fan.turnOn();
+    public void openFan(){
+        this.fan.turnOn();
     }
-    public void closeFan(Fan fan){
-        fan.turnOff();
+    public void closeFan(){
+        this.fan.turnOff();
     }
 
 }

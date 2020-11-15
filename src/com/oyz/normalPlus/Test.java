@@ -7,13 +7,13 @@ public class Test {
         Fan fan=new Fan();
 
         //直接调用可能处理慢，然后导致后面的请求进不来
-        Phone phone=new Phone();
-        phone.openLight(light);
-        phone.openTv(tv);
+        Phone phone=new Phone(tv,light,fan);
+        phone.openLight();
+        phone.openTv();
 
         //调用风扇
-        phone.openFan(fan);
-        phone.closeFan(fan);
+        phone.openFan();
+        phone.closeFan();
 
     }
 }

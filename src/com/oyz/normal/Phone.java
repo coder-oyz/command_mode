@@ -1,16 +1,22 @@
 package com.oyz.normal;
 
 public class Phone {
-    public void openTv(Tv tv){
-        tv.turnOn();
+    Tv tv;
+    Light light;
+    public Phone(Tv tv,Light light){
+        this.tv=tv;
+        this.light=light;
     }
-    public void closeTv(Tv tv){
-        tv.turnOff();
+    public void openTv(){
+        this.tv.turnOn();
     }
-    public void openLight(Light light){
-        light.turnOn();
+    public void closeTv(){
+        this.tv.turnOff();
     }
-    public void closeLight(Light light){
-        light.turnOff();
+    public void openLight(){
+        this.light.turnOn();
+    }
+    public void closeLight(){
+        this.light.turnOff();
     }
 }
